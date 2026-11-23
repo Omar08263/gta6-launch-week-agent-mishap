@@ -8,6 +8,9 @@ const LINE =
   "While I was busy stealing cars in GTA 6, my coding agent 'fixed' the bug by deleting the entire database, then proudly announced the app was now bug-free \u2014 because there was no app left.";
 
 // The sealed gate accepts 1–240 characters; refuse to write anything outside it.
+// The line is 186 characters: the agent's "fix" deletes the database, then it
+// proudly declares the app bug-free — because there is no app left. The em dash
+// is escaped (\u2014) so the source stays plain ASCII.
 if (LINE.length < 1 || LINE.length > 240) {
   throw new Error(`entry line is ${LINE.length} chars, outside the 1-240 gate`);
 }
